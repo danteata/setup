@@ -10,8 +10,8 @@ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
 # Load nvm and install latest production node
 source $HOME/.nvm/nvm.sh
-nvm install v0.10.12
-nvm use v0.10.12
+nvm install v0.10.17
+nvm use v0.10.17
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
@@ -39,10 +39,10 @@ fi
 if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
-git clone https://github.com/startup-class/dotfiles.git
-ln -sb dotfiles/.screenrc .
-ln -sb dotfiles/.bash_profile .
-ln -sb dotfiles/.bashrc .
-ln -sb dotfiles/.bashrc_custom .
-ln -sf dotfiles/.emacs.d .
+git clone https://github.com/danteata/dotfiles.git
+ln -sb dotfiles/screenrc .screenrc
+ln -sb dotfiles/bash_profile .bash_profile
+ln -sb dotfiles/bashrc .bashrc
+ln -sb dotfiles/vimrc .vimrc
+ln -sf dotfiles/emacs.d .emacs.d
 
