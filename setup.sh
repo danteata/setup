@@ -12,10 +12,15 @@ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 source $HOME/.nvm/nvm.sh
 nvm install v0.10.17
 nvm use v0.10.17
+nvm alias default 0.10.17
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
 npm install -g jshint
+npm install -g coffee-script
+npm install -g grunt-cli
+npm install -g bower 
+npm install -g nodemon 
 
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
@@ -45,4 +50,12 @@ ln -sb dotfiles/bash_profile .bash_profile
 ln -sb dotfiles/bashrc .bashrc
 ln -sb dotfiles/vimrc .vimrc
 ln -sf dotfiles/emacs.d .emacs.d
+
+source $HOME/.bash_profile
+
+# Install mongodb
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+sudo apt-get -qq update
+sudo apt-get install mongodb-10gen
 
