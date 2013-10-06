@@ -59,3 +59,5 @@ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | 
 sudo apt-get -qq update
 sudo apt-get install mongodb-10gen
 
+# Install common dev dependencies
+sudo apt-get install -y libxml2-dev imagemagick build-essential
